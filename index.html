@@ -42,10 +42,37 @@
 
   <section id="projects">
     <h2>Projects</h2>
-    <ul>
-      <li><strong>Project 1:</strong> Description or link.</li>
-      <li><strong>Project 2:</strong> Description or link.</li>
-    </ul>
+    <div class="project">
+        <h3>Emotion Classification of Natural Language <span class="place">@ Cornell University</span></h3>
+        <p>
+          Built models machine learning models to classify 28 human emotions from text. Created a custom NLP pipeline for feature engineering and model tuning.
+        </p>
+        <p class="skills">Skills: Python, PyTorch, Scikit-learn, LightGBM, SVM, CNN, DistilBERT, NLP</p>
+      </div>
+    
+      <div class="project">
+        <h3>Predicting Recession with Open Interest <span class="place">@ National Taiwan University</span></h3>
+        <p>
+          Explored open interest in different commodities as a predictor of economic recessions. 
+        </p>
+        <p class="skills">Skills: Python, EViews, Time Series Analysis, Econometrics, Derivatives Market</p>
+      </div>
+    
+      <div class="project">
+        <h3>Credit Card Customer Analysis <span class="place">@ National Taiwan University</span></h3>
+        <p>
+          Analyzed customer behavior using PCA, k-means, and market basket analysis. Delivered a visual report using Excel and SPSS to support targeted marketing strategies.
+        </p>
+        <p class="skills">Skills: Excel, SPSS, PCA, Data Analysis, Causal Inference</p>
+      </div>
+    
+      <div class="project">
+        <h3>Text Mining from Social Media <span class="place">@ National Taiwan University</span></h3>
+        <p>
+          Scraped 50,000+ Dcard posts and applied BERT-based segmentation, TF-IDF topic classification, and sentiment analysis. Built an XGBoost model to predict post popularity and uncover digital marketing trends.
+        </p>
+        <p class="skills">Skills: Python, PyTorch, Scikit-learn, BERT, XGBoost, Web Scraping, NLP</p>
+      </div>
   </section>
 
   <section id="media">
@@ -108,24 +135,21 @@
     <label for="name">Your Name (optional):</label><br />
     <input type="text" id="name" name="name" /><br /><br />
 
-    <label for="type">Type:</label>
+    <label for="type">What would you like to recommend?</label>
     <div class="radio-group">
-      <label class="radio-option">
-        <input type="radio" name="type" value="Movie" required>
-        Movie
-      </label>
-      <label class="radio-option">
-        <input type="radio" name="type" value="Book" required>
-        Book
-      </label>
-    </div>
+        <label class="radio-option">
+          <input type="radio" name="type" value="Movie" required />
+          Movie
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="type" value="Book" required />
+          Book
+        </label>
+      </div><br />
     
-       
-
-
-    <label for="recommendation">Your Recommendation:</label><br />
-    <textarea id="recommendation" name="recommendation" rows="4" required></textarea><br /><br />
-
+      <textarea id="recommendation" name="recommendation" rows="4" required
+        placeholder="e.g., I recommend 'Oppenheimer' — powerful story, amazing score."></textarea><br /><br />
+    
     <button type="submit">Submit</button>
     </form>
   </section>  

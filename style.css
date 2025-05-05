@@ -1,4 +1,4 @@
-/* Reset and basics */
+/* Reset & base setup */
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +6,18 @@
   }
   
   body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #ffffff;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #fff;
     color: #333;
     line-height: 1.6;
     padding: 0 20px;
   }
   
-  /* Navigation Bar */
+  /* Navigation */
   header {
-    background-color: transparent;
     border-bottom: 1px solid #eaeaea;
     padding: 15px 0;
+    margin-bottom: 40px;
   }
   
   .navbar {
@@ -25,20 +25,26 @@
     justify-content: space-between;
     align-items: center;
     max-width: 960px;
-    margin: auto;
+    margin: 0 auto;
   }
   
-  .nav-left, .nav-right {
+  .nav-left a {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #007acc;
+    text-decoration: none;
+  }
+  
+  .nav-right {
     display: flex;
-    align-items: center;
+    gap: 20px;
   }
   
   .nav-link {
-    margin: 0 10px;
+    font-weight: 500;
     text-decoration: none;
     color: #007acc;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    font-size: 1em;
   }
   
   .nav-link:hover {
@@ -48,78 +54,67 @@
   /* Sections */
   section {
     max-width: 800px;
-    margin: 60px auto;
+    margin: 0 auto 60px auto;
     padding: 0 10px;
   }
   
   section h2 {
-    margin-bottom: 10px;
-    color: #222;
     font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #222;
   }
   
-  section p, section ul {
-    color: #444;
-    font-size: 1.05em;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    font-size: 0.9em;
-    color: #888;
-    padding: 30px 0;
-    border-top: 1px solid #eaeaea;
-    margin-top: 60px;
-  }
-  
-
-  .footer-icons {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 10px;
-  }
-  
-  .icon {
-    width: 24px;
-    height: 24px;
-    fill: #555;
-    transition: transform 0.2s ease, filter 0.2s ease;
-    filter: brightness(0) saturate(100%);
-  }
-  
-  .icon:hover {
-    transform: scale(1.1);
-    filter: brightness(0.4) sepia(1) hue-rotate(180deg);
-  }
-  
-
-  #about p {
-    margin-bottom: 1em;  /* or any spacing you prefer */
-  }
-
-  a {
-    color: #007acc;          /* A clean professional blue */
-    text-decoration: none;   /* Removes the underline */
-  }
-
-  #media {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 0 10px;
-  }
-  
-  #media h3 {
-    margin-top: 30px;
+  section h3 {
     font-size: 1.2em;
     color: #333;
+    margin-bottom: 5px;
   }
   
-  .media-list li {
-    margin-bottom: 8px;
+  section p,
+  section ul {
+    font-size: 1.05em;
+    margin-bottom: 1em;
+    color: #444;
   }
   
+  /* Links */
+  a {
+    color: #007acc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #005f99;
+  }
+  
+  /* Project-specific */
+  .project {
+    margin-bottom: 30px;
+  }
+  
+  .place {
+    font-size: 0.9em;
+    font-weight: normal;
+    color: #777;
+    margin-left: 8px;
+  }
+  
+  .skills {
+    font-size: 0.95em;
+    color: #666;
+    font-style: italic;
+    margin-top: -6px;
+  }
+  
+  /* Media lists */
+  .media-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  /* Form styles */
   form {
     margin-top: 20px;
   }
@@ -147,6 +142,7 @@
     background-color: #005f99;
   }
   
+  /* Radio buttons */
   .radio-group {
     display: flex;
     gap: 100px;
@@ -158,9 +154,46 @@
     display: flex;
     align-items: center;
     font-weight: 500;
-    gap: 0px;
+    gap: 6px;
   }
   
+  /* Footer */
+  footer {
+    border-top: 1px solid #eaeaea;
+    text-align: center;
+    padding: 30px 0 20px 0;
+    margin-top: 60px;
+    color: #777;
+    font-size: 0.9em;
+  }
   
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 10px;
+  }
   
+  .icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) saturate(100%);
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+    filter: brightness(0.4) sepia(1) hue-rotate(180deg);
+  }
+  
+  /* Summary toggle styling */
+  summary {
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  details {
+    margin-bottom: 20px;
+  }
   
